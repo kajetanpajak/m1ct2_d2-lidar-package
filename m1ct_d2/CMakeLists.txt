@@ -29,6 +29,8 @@ include_directories(
 
 add_executable(m1ct_d2 ${SDK_SRC})
 
+target_compile_definitions(m1ct_d2 PRIVATE HAS_CLOCK_GETTIME=1)
+
 ament_target_dependencies(m1ct_d2
   "rclcpp"
   "sensor_msgs"
